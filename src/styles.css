@@ -1,0 +1,92 @@
+body {
+  margin: 5em auto;
+  font: normal 100% monospace;
+  max-width: 90em;
+  max-height: 70em;
+}
+.app {
+  margin: 0 auto;
+  background-image: url("https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?cs=srgb&dl=pexels-invisiblepower-1076885.jpg&fm=jpg");
+  background-repeat: no repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border: 4px solid #4e4e50;
+  border-radius: 4px;
+  padding: 2em;
+}
+form {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 1em;
+}
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+}
+#search-submit {
+  color: white;
+  font-size: 1em;
+  background-color: rgba(78, 78, 80, 0.7);
+  padding: 10px;
+  border: 2px solid rgba(78, 78, 80, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#current-location-button {
+  color: white;
+  font-size: 1em;
+  background-color: rgba(78, 78, 80, 0.7);
+  border: 2px solid rgba(78, 78, 80, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.details {
+  display: inline;
+}
+.details-1 {
+  float: left;
+}
+.details-2 {
+  float: right;
+  font-size: 20px;
+}
+.center-piece {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+h4 {
+  text-transform: capitalize;
+}
+
+.main-snowflake {
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 0.1em;
+}
+.py-5,
+.px-5 {
+  padding: 0 auto;
+}
+.one,
+.two,
+.three,
+.four,
+.five {
+  border: 4px solid rgba(78, 78, 80, 0.5);
+  border-radius: 4px;
+  padding: 40px 30px 40px 30px;
+  margin: 10px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 2;
+  color: white;
+  background-color: rgba(78, 78, 80, 0.7);
+}
