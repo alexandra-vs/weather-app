@@ -18,7 +18,7 @@ function currentDayTime() {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thurdsay",
+    "Thursday",
     "Friday",
     "Saturday",
   ];
