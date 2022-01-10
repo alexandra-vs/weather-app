@@ -93,12 +93,6 @@ h4:first-letter {
   top: -4px;
 }
 
-.main-snowflake {
-  font-size: 80px;
-  color: rgba(0, 0, 0, 0.7);
-  padding: 0.1em;
-  margin-bottom: 0;
-}
 .container .forecast .py-5,
 .px-5 {
   padding-top: 0 !important;

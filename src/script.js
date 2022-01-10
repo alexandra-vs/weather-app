@@ -62,6 +62,13 @@ function showTemperature(response) {
 
   let pressure = document.querySelector(".pressure");
   pressure.innerHTML = `Pressure: ${response.data.main.pressure}`;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
