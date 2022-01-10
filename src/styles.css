@@ -52,7 +52,7 @@ h2 {
   margin: 0px;
 }
 h2 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 p {
@@ -90,7 +90,7 @@ h4:first-letter {
 .units {
   font-size: 20px;
   position: relative;
-  top: -5px;
+  top: -4px;
 }
 
 .main-snowflake {

@@ -1,6 +1,6 @@
 function currentDayTime() {
   let now = new Date();
-  let h2 = document.querySelector("h2");
+  let dateResult = document.querySelector("#date");
 
   let date = now.getDate();
   let hours = now.getHours();
@@ -13,15 +13,7 @@ function currentDayTime() {
   }
   let year = now.getFullYear();
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
   let day = days[now.getDay()];
 
   let months = [
@@ -40,7 +32,7 @@ function currentDayTime() {
   ];
   let month = months[now.getMonth()];
 
-  h2.innerHTML = `${day}, ${hours}:${minutes} <br /> ${date} ${month} ${year}`;
+  dateResult.innerHTML = `${day}, ${hours}:${minutes} <br /> ${date} ${month} ${year}`;
 }
 
 //========================
