@@ -52,7 +52,7 @@ currentDayTime();
 //Function to display searched information
 
 function showTemperature(response) {
-  let roundedTemp = Math.round(response.data.main.temp) + `°C`;
+  let roundedTemp = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("h3");
   currentTemp.innerHTML = roundedTemp;
 

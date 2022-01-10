@@ -12,50 +12,69 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/0bdbf94755.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="src/styles.css">
-   
+    <script
+      src="https://kit.fontawesome.com/0bdbf94755.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <main>
-    <div class="container-fluid app">
-        <div id="city-search-function">
-          <form id = "search-form">
-          <button id = "current-location-button">Current</button>
-          <input id = "search-text-input" type="text" placeholder="Search for your city..." autocomplete="off" autofocus="on" required/>
-          <input id= "search-submit" type="submit" value="search" placeholder="Submit"/>
-          </form>
-        </div>    
-        <div class="details">
-          <div class="details-1">
-            <span>
-              <h1 id="search-city">Your City...</h1>
-              <h2></h2>
-            </span>
+      <div class="weather-app-wrapper">
+        <div class="container-fluid app">
+          <div id="city-search-function">
+            <form id="search-form">
+              <button id="current-location-button">Current</button>
+              <input
+                id="search-text-input"
+                type="text"
+                placeholder="Search for your city..."
+                autocomplete="off"
+                autofocus="on"
+                required
+              />
+              <input
+                id="search-submit"
+                type="submit"
+                value="search"
+                placeholder="Submit"
+              />
+            </form>
           </div>
-          <div class="details-2">
-            <span>
-              <p class="humidity">Humidity: %<br /></p>
-              <p class="wind">Wind: km/h<br /></p>
-              <p class="pressure">Pressure: <br /></p>
-            </span>
-          </div>
-        </div>
-        <div class="center-piece">
+          <div class="details">
+            <div class="details-1">
               <span>
-                <h4 class="weather-description" id="weather-description"><br /></h4>
-                <h3 class="temperature" id="search-temperature"></h3>
+                <h1 id="search-city"></h1>
+                <h2></h2>
+              </span>
+            </div>
+            <div class="details-2">
+              <span>
+                <p class="humidity">Humidity: %<br /></p>
+                <p class="wind">Wind: km/h<br /></p>
+                <p class="pressure">Pressure: <br /></p>
+              </span>
+            </div>
+          </div>
+          <div class="center-piece">
+            <span>
+              <h4 class="weather-description" id="weather-description">
                 <br />
+              </h4>
+              <div class="temperature-units">
+                <h3 class="temperature" id="search-temperature"></h3>
+                <span class="units">°C | °F</span>
+              </div>
               <p><i class="fas fa-snowflake main-snowflake"></i></p>
             </span>
-        </div>        
-        <div class="container px-5 py-5 forecast">
-        <div class="row">
-          <div class="col col-sm mx1 one">
-            Thursday<br />
-            0°C <br />
-            <i class="fas fa-cloud"></i>
-            </div>
+          </div>
+          <div class="container px-5 py-5 forecast">
+            <div class="row">
+              <div class="col col-sm mx1 one">
+                Thursday<br />
+                0°C <br />
+                <i class="fas fa-cloud"></i>
+              </div>
               <div class="col col-sm mx1 two">
                 Friday<br />
                 -1°C <br />
@@ -79,6 +98,12 @@
             </div>
           </div>
         </div>
+        <small>
+          <a href="https://https://github.com/alexandra-vs" target="_blank">
+            Open-source code</a
+          >
+          by Alexandra Velasco-Svoboda
+        </small>
       </div>
     </main>
     <script src="src/script.js"></script>

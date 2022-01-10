@@ -5,14 +5,15 @@ body {
   max-height: 70em;
 }
 .app {
-  margin: 0 auto;
+  margin: 30px auto;
   background-image: url("https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?cs=srgb&dl=pexels-invisiblepower-1076885.jpg&fm=jpg");
   background-repeat: no repeat;
   background-attachment: fixed;
   background-size: cover;
   border: 4px solid #4e4e50;
   border-radius: 4px;
-  padding: 2em;
+  padding: 1.7em;
+  max-width: 800px;
 }
 form {
   display: flex;
@@ -46,6 +47,23 @@ input[type="text"] {
   text-align: center;
 }
 
+h1,
+h2 {
+  margin: 0px;
+}
+h2 {
+  font-size: 25px;
+}
+
+p {
+  margin-bottom: 4px;
+}
+
+h3 {
+  display: inline;
+  margin-bottom: 0px;
+}
+
 .details {
   display: inline;
 }
@@ -55,25 +73,38 @@ input[type="text"] {
 .details-2 {
   float: right;
   font-size: 20px;
+  padding-top: 20px;
 }
 .center-piece {
   clear: both;
   display: block;
   margin: 0 auto;
   text-align: center;
+  padding-top: 10px;
 }
-h4 {
+h4:first-letter {
   text-transform: capitalize;
+  margin-bottom: 0px;
+}
+
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -5px;
 }
 
 .main-snowflake {
   font-size: 80px;
   color: rgba(0, 0, 0, 0.7);
   padding: 0.1em;
+  margin-bottom: 0;
 }
-.py-5,
+.container .forecast .py-5,
 .px-5 {
-  padding: 0 auto;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 .one,
 .two,
@@ -82,11 +113,16 @@ h4 {
 .five {
   border: 4px solid rgba(78, 78, 80, 0.5);
   border-radius: 4px;
-  padding: 40px 30px 40px 30px;
+  padding: 25px 10px 25px 10px;
   margin: 10px;
   text-align: center;
   font-size: 22px;
   line-height: 2;
   color: white;
   background-color: rgba(78, 78, 80, 0.7);
+}
+
+.weather-app-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
 }
