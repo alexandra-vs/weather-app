@@ -93,6 +93,19 @@ h4:first-letter {
   top: -4px;
 }
 
+a {
+  text-decoration: none;
+}
+
+.temperature-units .active {
+  color: black;
+  cursor: default;
+}
+
+.temperature-units .active:hover {
+  text-decoration: none;
+}
+
 .container .forecast .py-5,
 .px-5 {
   padding-top: 0 !important;
