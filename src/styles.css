@@ -6,14 +6,14 @@ body {
 }
 .app {
   margin: 30px auto;
-  background-image: url("https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?cs=srgb&dl=pexels-invisiblepower-1076885.jpg&fm=jpg");
-  background-repeat: no repeat;
-  background-attachment: fixed;
-  background-size: cover;
   border: 4px solid #4e4e50;
   border-radius: 4px;
   padding: 1.7em;
   max-width: 800px;
+}
+#backgroundIMG {
+  width: 100%;
+  display: inline;
 }
 form {
   display: flex;
