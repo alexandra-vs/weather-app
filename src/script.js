@@ -41,6 +41,8 @@ currentDayTime();
 
 //=========================
 
+//Display forecast
+
 //Function to display searched information
 
 function showTemperature(response) {
@@ -76,11 +78,19 @@ function showTemperature(response) {
 
   if (response.data.main.temp <= 10) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?cs=srgb&dl=pexels-invisiblepower-1076885.jpg&fm=jpg")`;
+    setBackground.style.backgroundSize = "cover";
   } else if (response.data.main.temp >= 25) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/62389/pexels-photo-62389.jpeg?cs=srgb&dl=pexels-life-of-pix-62389.jpg&fm=jpg")`;
+    setBackground.style.backgroundSize = "cover";
+  } else if (response.data.main.temp >= 35) {
+    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/998657/pexels-photo-998657.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
+    setBackground.style.backgroundSize = "cover;";
   } else {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/699422/pexels-photo-699422.jpeg?cs=srgb&dl=pexels-dapurmelodi-699422.jpg&fm=jpg")`;
+    setBackground.style.backgroundSize = "cover";
   }
+
+  console.log(response.data.weather);
 }
 
 //Changing background image according to temperature
@@ -155,3 +165,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 //Default city
 searchCity("Sydney");
+displayForecast();

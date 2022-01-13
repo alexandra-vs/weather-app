@@ -22,9 +22,6 @@
     <main>
       <div class="weather-app-wrapper">
         <div class="container-fluid app">
-          <div class="image-wrapper">
-            <img id="backgroundIMG" />
-          </div>
           <div id="city-search-function">
             <form id="search-form">
               <button id="current-location-button">Current</button>
@@ -74,32 +71,19 @@
               <img src="#" id="icon" />
             </span>
           </div>
-          <div class="container px-5 py-5 forecast">
+          <div class="weather-forecast">
             <div class="row">
-              <div class="col col-sm mx1 one">
-                Thursday<br />
-                0°C <br />
-                <i class="fas fa-cloud"></i>
-              </div>
-              <div class="col col-sm mx1 two">
-                Friday<br />
-                -1°C <br />
-                <i class="far fa-snowflake"></i>
-              </div>
-              <div class="col col-sm mx1 three">
-                Saturday<br />
-                -2°C<br />
-                <i class="fas fa-snowman"></i>
-              </div>
-              <div class="col col-sm mx1 four">
-                Sunday<br />
-                1°C <br />
-                <i class="fas fa-snowflake"></i>
-              </div>
-              <div class="col col-sm mx1 five">
-                Monday<br />
-                3°C <br />
-                <i class="far fa-sun"></i>
+              <div class="col-2">
+                <div class="weather-forecast-date">Thu</div>
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt=""
+                  width="36"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                  <span class="weather-forecast-temperature-min">12°</span>
+                </div>
               </div>
             </div>
           </div>
