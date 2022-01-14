@@ -60,8 +60,9 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `
+        `   
               <div class="col-2">
+              <div class="weather-forecast-wrapper">
                 <div class="weather-forecast-date">${formatDay(
                   forecastDay.dt
                 )}</div>
@@ -82,6 +83,8 @@ function displayForecast(response) {
                   )}° </span>
                 </div>
               </div>
+              </div>
+            
             `;
     }
   });
@@ -129,18 +132,20 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
   let setBackground = document.querySelector(".app");
+  let changeFontColor = document.querySelector(".details");
 
   if (response.data.main.temp <= 10) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?cs=srgb&dl=pexels-invisiblepower-1076885.jpg&fm=jpg")`;
     setBackground.style.backgroundSize = "cover";
   } else if (response.data.main.temp >= 25) {
-    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/62389/pexels-photo-62389.jpeg?cs=srgb&dl=pexels-life-of-pix-62389.jpg&fm=jpg")`;
+    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/6178793/pexels-photo-6178793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")`;
     setBackground.style.backgroundSize = "cover";
+    changeFontColor.style.color = "white";
   } else if (response.data.main.temp >= 35) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/998657/pexels-photo-998657.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
     setBackground.style.backgroundSize = "cover;";
   } else {
-    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/699422/pexels-photo-699422.jpeg?cs=srgb&dl=pexels-dapurmelodi-699422.jpg&fm=jpg")`;
+    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/3684396/pexels-photo-3684396.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
     setBackground.style.backgroundSize = "cover";
   }
 

@@ -67,7 +67,8 @@ h3 {
 .center-piece {
   clear: both;
   display: block;
-  margin: 0 auto;
+
+  color: white;
   text-align: center;
   padding-top: 10px;
 }
@@ -82,17 +83,23 @@ h4:first-letter {
   top: -4px;
 }
 
-a {
-  text-decoration: none;
+.weather-description,
+.units {
+  font-size: 30px;
+  font-weight: 900;
 }
 
-.temperature-units .active {
-  color: black;
-  cursor: default;
+.temperature {
+  font-size: 40px;
 }
 
-.temperature-units .active:hover {
-  text-decoration: none;
+.weather-forecast-wrapper {
+  border: 4px solid rgba(78, 78, 80, 0.5);
+  border-radius: 4px;
+  padding: 15px 8px 15px 8px;
+  margin: 10px auto;
+  line-height: 2;
+  background-color: rgba(78, 78, 80, 0.7);
 }
 
 .weather-forecast {
