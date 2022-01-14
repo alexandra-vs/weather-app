@@ -67,7 +67,7 @@ function displayForecast(response) {
                   forecastDay.dt
                 )}</div>
                 
-                <img
+                <img 
                   src="http://openweathermap.org/img/wn/${
                     forecastDay.weather[0].icon
                   }@2x.png"
@@ -133,17 +133,19 @@ function showTemperature(response) {
 
   let setBackground = document.querySelector(".app");
   let changeFontColor = document.querySelector(".details");
+  let forecastWrapperColor = document.querySelector(
+    ".weather-forecast-wrapper"
+  );
 
   if (response.data.main.temp <= 10) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?cs=srgb&dl=pexels-invisiblepower-1076885.jpg&fm=jpg")`;
     setBackground.style.backgroundSize = "cover";
+    forecastWrapperColor.style.background = "black";
   } else if (response.data.main.temp >= 25) {
-    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/6178793/pexels-photo-6178793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")`;
+    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/673020/pexels-photo-673020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
     setBackground.style.backgroundSize = "cover";
     changeFontColor.style.color = "white";
-  } else if (response.data.main.temp >= 35) {
-    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/998657/pexels-photo-998657.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
-    setBackground.style.backgroundSize = "cover;";
+    forecastWrapperColor.style.background = "white";
   } else {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/3684396/pexels-photo-3684396.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
     setBackground.style.backgroundSize = "cover";
