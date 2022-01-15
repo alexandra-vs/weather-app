@@ -36,6 +36,11 @@ input[type="text"] {
   text-align: center;
 }
 
+#current-location-button {
+  display: inline;
+  position: relative;
+}
+
 h1,
 h2 {
   margin: 0px;
@@ -127,27 +132,4 @@ h4:first-letter {
 
 .weather-forecast-temperatures {
   font-size: 20px;
-}
-
-.fa-snowflake {
-  animation: fall linear forwards;
-  color: blue;
-  position: absolute;
-  top: -20px;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(105vh);
-  }
-}
-
-body {
-  --toggle: 1;
-  --playState: "running";
-}
-
-body {
-  --toggle: 0;
-  --playState: "paused";
 }

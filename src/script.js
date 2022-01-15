@@ -128,8 +128,6 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  let snowElement = document.querySelector("#snowflake");
-
   celsiusTemperature = response.data.main.temp;
 
   let setBackground = document.querySelector(".app");
@@ -138,16 +136,13 @@ function showTemperature(response) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/1674624/pexels-photo-1674624.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
     setBackground.style.backgroundSize = "cover";
     changeFontColor.style.color = "white";
-    snowElement.style.webkitAnimationPlayState = "running";
   } else if (response.data.main.temp >= 25) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/673020/pexels-photo-673020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
     setBackground.style.backgroundSize = "cover";
     changeFontColor.style.color = "white";
-    snowElement.style.webkitAnimationPlayState = "paused";
   } else {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/3684396/pexels-photo-3684396.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
     setBackground.style.backgroundSize = "cover";
-    snowElement.style.webkitAnimationPlayState = "paused";
   }
 
   getForecast(response.data.coord);
@@ -185,33 +180,24 @@ function searchLocation(position) {
 }
 
 //=============
-//Calling functions
+//Current location
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
 
 //Global variables
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
 //Default city
 searchCity("Sydney");
 
 //extras
-setInterval(createSnowFlake, 300);
-
-function createSnowFlake() {
-  const snow_flake = document.createElement("i");
-  snow_flake.classList.add("fas");
-  snow_flake.classList.add("fa-snowflake");
-  snow_flake.style.left = Math.random() * window.innerWidth + "px";
-  snow_flake.style.animationDuration = Math.random() * 10 + 5 + "s";
-  snow_flake.style.opacity = Math.random();
-  snow_flake.style.fontSize = Math.random() * 10 + 10 + "px";
-
-  document.body.appendChild(snow_flake);
-
-  setTimeout(() => {
-    snow_flake.remove();
-  }, 5000);
-}
 
 // from snowflake css
