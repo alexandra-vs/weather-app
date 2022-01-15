@@ -159,7 +159,7 @@ function showTemperature(response) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/3684396/pexels-photo-3684396.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
     setBackground.style.backgroundSize = "cover";
     changeFontColor.style.color = "black";
-    changeCenterColor.style.color = "white";
+    changeCenterColor.style.color = "rgba(245, 238, 220)";
   }
 
   getForecast(response.data.coord);
