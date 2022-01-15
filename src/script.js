@@ -84,7 +84,6 @@ function displayForecast(response) {
                 </div>
               </div>
               </div>
-            
             `;
     }
   });
@@ -132,23 +131,35 @@ function showTemperature(response) {
 
   let setBackground = document.querySelector(".app");
   let changeFontColor = document.querySelector(".details");
+  let changeCenterColor = document.querySelector("#center");
+
   if (response.data.main.temp <= 3) {
-    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/258112/pexels-photo-258112.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
+    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/3801464/pexels-photo-3801464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
     setBackground.style.backgroundSize = "cover";
+    changeFontColor.style.color = "rgba(245, 238, 220)";
+    changeFontColor.style.opacity = "0.8";
+    changeCenterColor.style.color = "rgba(245, 238, 220)";
+    changeCenterColor.style.opacity = "0.8";
   } else if (response.data.main.temp <= 10) {
-    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/258136/pexels-photo-258136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
+    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/5192874/pexels-photo-5192874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
     setBackground.style.backgroundSize = "cover";
-    changeFontColor.style.color = "white";
+    changeFontColor.style.color = "rgba(245, 238, 220)";
+    changeFontColor.style.opacity = "0.8";
+    changeCenterColor.style.color = "rgba(245, 238, 220)";
+    changeCenterColor.style.opacity = "0.8";
   } else if (response.data.main.temp >= 25) {
-    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
+    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/462024/pexels-photo-462024.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
     setBackground.style.backgroundSize = "cover";
-    changeFontColor.style.color = "white";
+    changeFontColor.style.color = "black";
+    changeCenterColor.style.color = "black";
   } else if (response.data.main.temp >= 30) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/998653/pexels-photo-998653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
     setBackground.style.backgroundSize = "cover";
   } else {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/3684396/pexels-photo-3684396.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
     setBackground.style.backgroundSize = "cover";
+    changeFontColor.style.color = "black";
+    changeCenterColor.style.color = "white";
   }
 
   getForecast(response.data.coord);

@@ -36,9 +36,11 @@ input[type="text"] {
   text-align: center;
 }
 
-#current-location-button {
+#current-location-button,
+#searchbutton {
   display: inline;
   position: relative;
+  font-weight: strong;
 }
 
 h1,
@@ -102,13 +104,13 @@ h4:first-letter {
 }
 
 .weather-forecast-wrapper {
-  border: 4px solid rgba(245, 238, 220, 0.5);
+  border: 4px solid rgba(245, 238, 220, 0.8);
   border-radius: 4px;
   padding: 15px 8px 15px 8px;
   margin: 10px auto;
   line-height: 2;
-  background-color: rgba(245, 238, 220, 0.6);
-  font-weight: 400;
+  background-color: rgba(250, 247, 239, 0.6);
+  font-weight: 500;
 }
 
 .weather-forecast {
@@ -119,6 +121,11 @@ h4:first-letter {
 .weather-forecast-date {
   font-size: 26px;
   color: black;
+  font-weight: 200;
+}
+
+.weather-forecast-temperature-max {
+  font-weight: 900;
 }
 
 .weather-forecast-temperature-min {
