@@ -108,7 +108,7 @@ h4:first-letter {
   margin: 10px auto;
   line-height: 2;
   background-color: rgba(245, 238, 220, 0.6);
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .weather-forecast {
