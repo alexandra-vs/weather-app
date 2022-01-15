@@ -96,7 +96,6 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "a64b705a37558d573aa48063a58b50cf";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -129,26 +128,26 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  let snowElement = document.querySelector("#snowflake");
+
   celsiusTemperature = response.data.main.temp;
 
   let setBackground = document.querySelector(".app");
   let changeFontColor = document.querySelector(".details");
-  let forecastWrapperColor = document.querySelector(
-    ".weather-forecast-wrapper"
-  );
-
   if (response.data.main.temp <= 10) {
-    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?cs=srgb&dl=pexels-invisiblepower-1076885.jpg&fm=jpg")`;
+    setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/1674624/pexels-photo-1674624.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
     setBackground.style.backgroundSize = "cover";
-    forecastWrapperColor.style.background = "black";
+    changeFontColor.style.color = "white";
+    snowElement.style.webkitAnimationPlayState = "running";
   } else if (response.data.main.temp >= 25) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/673020/pexels-photo-673020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
     setBackground.style.backgroundSize = "cover";
     changeFontColor.style.color = "white";
-    forecastWrapperColor.style.background = "white";
+    snowElement.style.webkitAnimationPlayState = "paused";
   } else {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/3684396/pexels-photo-3684396.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")`;
     setBackground.style.backgroundSize = "cover";
+    snowElement.style.webkitAnimationPlayState = "paused";
   }
 
   getForecast(response.data.coord);
@@ -195,3 +194,24 @@ searchForm.addEventListener("submit", handleSubmit);
 
 //Default city
 searchCity("Sydney");
+
+//extras
+setInterval(createSnowFlake, 300);
+
+function createSnowFlake() {
+  const snow_flake = document.createElement("i");
+  snow_flake.classList.add("fas");
+  snow_flake.classList.add("fa-snowflake");
+  snow_flake.style.left = Math.random() * window.innerWidth + "px";
+  snow_flake.style.animationDuration = Math.random() * 10 + 5 + "s";
+  snow_flake.style.opacity = Math.random();
+  snow_flake.style.fontSize = Math.random() * 10 + 10 + "px";
+
+  document.body.appendChild(snow_flake);
+
+  setTimeout(() => {
+    snow_flake.remove();
+  }, 5000);
+}
+
+// from snowflake css
