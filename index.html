@@ -22,67 +22,67 @@
     <main>
       <div class="weather-app-wrapper">
         <div class="container-fluid app">
-          <div id="city-search-function">
-            <form id="search-form">
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                id="current-location-button"
-              >
-                <i class="fas fa-location-arrow"></i>
-              </button>
-              <input
-                id="search-text-input"
-                type="search"
-                class="form-control"
-                placeholder="Search for your city..."
-                aria-label="Search for your city..."
-                autocomplete="off"
-                autofocus="on"
-                required
-              />
-              <div class="input-group-append buttonicons">
+          <div class="row">
+            <div id="city-search-function">
+              <form id="search-form">
                 <button
-                  class="btn btn-outline-secondary form-control"
-                  type="submit"
-                  id="searchbutton"
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="current-location-button"
                 >
-                  <i class="fas fa-search"></i>
+                  <i class="fas fa-location-arrow"></i>
                 </button>
+                <input
+                  id="search-text-input"
+                  type="search"
+                  class="form-control"
+                  placeholder="Search for your city..."
+                  aria-label="Search for your city..."
+                  autocomplete="off"
+                  autofocus="on"
+                  required
+                />
+                <div class="input-group-append buttonicons">
+                  <button
+                    class="btn btn-outline-secondary form-control"
+                    type="submit"
+                    id="searchbutton"
+                  >
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="details">
+              <div class="details-1">
+                <span>
+                  <h1 id="search-city"></h1>
+                  <h2>Last updated: <span id="date"></span></h2>
+                </span>
               </div>
-            </form>
-          </div>
-          <div class="details">
-            <div class="details-1">
+              <div class="details-2">
+                <span>
+                  <p class="humidity">Humidity: %<br /></p>
+                  <p class="wind">Wind: km/h<br /></p>
+                  <p class="pressure">Pressure: <br /></p>
+                </span>
+              </div>
+            </div>
+            <div class="center-piece" id="center">
               <span>
-                <h1 id="search-city"></h1>
-                <h2>Last updated: <span id="date"></span></h2>
+                <h4 class="weather-description" id="weather-description">
+                  <br />
+                </h4>
+                <div class="temperature-units">
+                  <h3 class="temperature" id="search-temperature"></h3>
+                  <span class="units">°C </span>
+                </div>
+                <img src="#" id="icon" />
               </span>
             </div>
-            <div class="details-2">
-              <span>
-                <p class="humidity">Humidity: %<br /></p>
-                <p class="wind">Wind: km/h<br /></p>
-                <p class="pressure">Pressure: <br /></p>
-              </span>
-            </div>
-          </div>
-          <div class="center-piece" id="center">
-            <span>
-              <h4 class="weather-description" id="weather-description">
-                <br />
-              </h4>
-              <div class="temperature-units">
-                <h3 class="temperature" id="search-temperature"></h3>
-                <span class="units">°C </span>
-              </div>
-              <img src="#" id="icon" />
-            </span>
-          </div>
 
-          <div class="weather-forecast" id="forecast">
-            <div class="row">
-              <div class="col-2">
+            <div class="container-fluid weather-forecast" id="forecast">
+              <div class="row">
                 <div class="weather-forecast-date"></div>
                 <img
                   src="http://openweathermap.org/img/wn/10d@2x.png"
@@ -98,10 +98,12 @@
           </div>
         </div>
         <small>
-          <a href="https://github.com/alexandra-vs" target="_blank">
-            Open-source code</a
-          >
-          by Alexandra Velasco-Svoboda
+          <p class="credit">
+            <a href="https://github.com/alexandra-vs" target="_blank">
+              Open-source code</a
+            >
+            by Alexandra Velasco-Svoboda
+          </p>
         </small>
       </div>
     </main>

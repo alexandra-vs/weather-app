@@ -140,3 +140,31 @@ h4:first-letter {
 .weather-forecast-temperatures {
   font-size: 16px;
 }
+
+@media (max-width: 576px) {
+  .weather-forecast-date {
+    font-size: 10px;
+  }
+  .details-1,
+  #search-city {
+    font-size: 20px;
+  }
+  .details-1,
+  h2,
+  #date {
+    font-size: 15px;
+  }
+  .details-2 {
+    font-size: 10px;
+    padding-top: 10px;
+  }
+  #search-form {
+    width: 100%;
+  }
+  .fas {
+    font-size: 10px;
+  }
+  .credit {
+    text-align: center;
+  }
+}
