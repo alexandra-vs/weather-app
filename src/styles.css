@@ -144,8 +144,12 @@ h4:first-letter {
 @media (max-width: 576px) {
   .weather-forecast-date,
   .weather-forecast-temperatures {
-    font-size: 10px;
+    font-size: 17px;
     justify-content: center;
+  }
+  .details {
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
 
   .details-1,
