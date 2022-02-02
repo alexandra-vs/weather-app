@@ -19,98 +19,97 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div id="snow-function">
-      <main>
-        <div class="weather-app-wrapper">
-          <div class="container-fluid app">
-            <div class="row">
-              <div id="city-search-function">
-                <form id="search-form">
+    <main>
+      <div id="snow-function"></div>
+      <div class="weather-app-wrapper">
+        <div class="container-fluid app">
+          <div class="row">
+            <div id="city-search-function">
+              <form id="search-form">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="current-location-button"
+                >
+                  <i class="fas fa-location-arrow"></i>
+                </button>
+                <input
+                  id="search-text-input"
+                  type="search"
+                  class="form-control"
+                  placeholder="Search for your city..."
+                  aria-label="Search for your city..."
+                  autocomplete="off"
+                  autofocus="on"
+                  required
+                />
+                <div class="input-group-append buttonicons">
                   <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    id="current-location-button"
+                    class="btn btn-outline-secondary form-control"
+                    type="submit"
+                    id="searchbutton"
                   >
-                    <i class="fas fa-location-arrow"></i>
+                    <i class="fas fa-search"></i>
                   </button>
-                  <input
-                    id="search-text-input"
-                    type="search"
-                    class="form-control"
-                    placeholder="Search for your city..."
-                    aria-label="Search for your city..."
-                    autocomplete="off"
-                    autofocus="on"
-                    required
-                  />
-                  <div class="input-group-append buttonicons">
-                    <button
-                      class="btn btn-outline-secondary form-control"
-                      type="submit"
-                      id="searchbutton"
-                    >
-                      <i class="fas fa-search"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <div class="details">
-                <div class="details-1">
-                  <span>
-                    <h1 id="search-city"></h1>
-                    <h2>Last updated: <span id="date"></span></h2>
-                  </span>
                 </div>
-                <div class="details-2">
-                  <span>
-                    <p class="humidity">Humidity: %<br /></p>
-                    <p class="wind">Wind: km/h<br /></p>
-                    <p class="pressure">Pressure: <br /></p>
-                  </span>
-                </div>
-              </div>
-              <div class="center-piece" id="center">
+              </form>
+            </div>
+            <div class="details">
+              <div class="details-1">
                 <span>
-                  <h4 class="weather-description" id="weather-description">
-                    <br />
-                  </h4>
-                  <div class="temperature-units">
-                    <h3 class="temperature" id="search-temperature"></h3>
-                    <span class="units">°C </span>
-                  </div>
-                  <img src="#" id="icon" />
+                  <h1 id="search-city"></h1>
+                  <h2>Last updated: <span id="date"></span></h2>
                 </span>
               </div>
+              <div class="details-2">
+                <span>
+                  <p class="humidity">Humidity: %<br /></p>
+                  <p class="wind">Wind: km/h<br /></p>
+                  <p class="pressure">Pressure: <br /></p>
+                </span>
+              </div>
+            </div>
+            <div class="center-piece" id="center">
+              <span>
+                <h4 class="weather-description" id="weather-description">
+                  <br />
+                </h4>
+                <div class="temperature-units">
+                  <h3 class="temperature" id="search-temperature"></h3>
+                  <span class="units">°C </span>
+                </div>
+                <img src="#" id="icon" />
+              </span>
+            </div>
 
-              <div class="container-fluid weather-forecast" id="forecast">
-                <div class="row">
-                  <div class="weather-forecast-date"></div>
-                  <img
-                    src="http://openweathermap.org/img/wn/10d@2x.png"
-                    alt=""
-                    width="36"
-                  />
-                  <div class="weather-forecast-temperatures">
-                    <span class="weather-forecast-temperature-max">18°</span>
-                    <span class="weather-forecast-temperature-min">12°</span>
-                  </div>
+            <div class="container-fluid weather-forecast" id="forecast">
+              <div class="row">
+                <div class="weather-forecast-date"></div>
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt=""
+                  width="36"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                  <span class="weather-forecast-temperature-min">12°</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="p-5">
-            <small>
-              <p class="credit">
-                <a href="https://github.com/alexandra-vs" target="_blank">
-                  Open-source code</a
-                >
-                by Alexandra Velasco-Svoboda
-              </p>
-            </small>
-          </div>
         </div>
-      </main>
-      <script src="src/script.js"></script>
-    </div>
+        <div class="p-5">
+          <small>
+            <p class="credit">
+              <a href="https://github.com/alexandra-vs" target="_blank">
+                Open-source code</a
+              >
+              by Alexandra Velasco-Svoboda
+            </p>
+          </small>
+        </div>
+      </div>
+    </main>
+    <script src="src/script.js"></script>
   </body>
 </html>
