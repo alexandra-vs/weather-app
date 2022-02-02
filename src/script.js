@@ -136,9 +136,30 @@ function showTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
 
+  let weatherCondition = document.querySelector("#snow-function");
+
+  let main = response.data.weather[0].main;
+  console.log(main);
+
   let setBackground = document.querySelector(".app");
   let changeFontColor = document.querySelector(".details");
   let changeCenterColor = document.querySelector("#center");
+
+  switch (main) {
+    case "Snow":
+      let style = weatherCondition.style;
+      style.background = `url("https://media0.giphy.com/media/7tYNMJ29GcbE4/giphy.gif")`;
+      style.width = "100%";
+      style.height = "100%";
+      style.position = "absolute";
+      style.left = "0px";
+      style.top = "0px";
+      style.zIndex = "2000";
+      console.log("hello");
+      break;
+    default:
+      console.log("default case");
+  }
 
   if (response.data.main.temp <= 3) {
     setBackground.style.backgroundImage = `url("https://images.pexels.com/photos/3801464/pexels-photo-3801464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`;
